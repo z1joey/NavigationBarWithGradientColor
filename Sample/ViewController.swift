@@ -9,8 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.isTransparent = true
+        if let navigationBar = navigationController?.navigationBar {
+            let navigationBarBackgroundView = UIView()
+            navigationBarBackgroundView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: navigationBar.bounds.height + UIApplication.shared.statusBarFrame.height)
+            navigationBarBackgroundView.setGradientBackground(colorTop: .blue, colorBottom: .green)
+            view.addSubview(navigationBarBackgroundView)
+        }
     }
 }

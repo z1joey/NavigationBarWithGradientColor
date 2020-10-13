@@ -20,7 +20,7 @@
                                 <rect key="frame" x="186.5" y="460" width="41" height="30"/>
                                 <state key="normal" title="PUSH"/>
                                 <connections>
-                                    <segue destination="omE-GB-mJA" kind="show" id="LVE-NK-8pG"/>
+                                    <segue destination="omE-GB-mJA" kind="presentation" id="LVE-NK-8pG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,8 +42,8 @@
         <!--View Controller-->
         <scene sceneID="Ec8-Vd-y1W">
             <objects>
-                <viewController id="omE-GB-mJA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2eq-CU-PhH">
+                <viewController modalPresentationStyle="fullScreen" id="omE-GB-mJA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2eq-CU-PhH" customClass="GradientColorView" customModule="NavigationBarWithGradientColor">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1959" y="139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Gradient Color Navigation Controller-->
         <scene sceneID="CU9-tO-aDZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rr7-6E-o2i" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rr7-6E-o2i" customClass="GradientColorNavigationController" customModule="NavigationBarWithGradientColor" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wWC-gn-Awt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

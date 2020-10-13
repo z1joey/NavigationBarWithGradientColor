@@ -13,12 +13,13 @@
 		D47C369F253423CA003B242C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C369D253423CA003B242C /* Main.storyboard */; };
 		D47C36A1253423CE003B242C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47C36A0253423CE003B242C /* Assets.xcassets */; };
 		D47C36A4253423CE003B242C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C36A2253423CE003B242C /* LaunchScreen.storyboard */; };
-		D47C36B325358641003B242C /* UINavigationController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36A925342548003B242C /* UINavigationController+Addition.swift */; };
+		D47C36B325358641003B242C /* UINavigationBar+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36A925342548003B242C /* UINavigationBar+Addition.swift */; };
 		D47C36B425358649003B242C /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36AA25342548003B242C /* UIView+Addition.swift */; };
 		D47C36B8253586A3003B242C /* NavigationBarWithGradientColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47C3686253422F8003B242C /* NavigationBarWithGradientColor.framework */; };
 		D47C36B9253586A3003B242C /* NavigationBarWithGradientColor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D47C3686253422F8003B242C /* NavigationBarWithGradientColor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C36BD25358976003B242C /* GradientColorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36AF2535794B003B242C /* GradientColorNavigationController.swift */; };
 		D47C36BE2535897A003B242C /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36B12535816B003B242C /* GradientColorView.swift */; };
+		D47C36C025358C0D003B242C /* GradientColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C36BF25358C0D003B242C /* GradientColorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +57,11 @@
 		D47C36A0253423CE003B242C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D47C36A3253423CE003B242C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D47C36A5253423CE003B242C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D47C36A925342548003B242C /* UINavigationController+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Addition.swift"; sourceTree = "<group>"; };
+		D47C36A925342548003B242C /* UINavigationBar+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Addition.swift"; sourceTree = "<group>"; };
 		D47C36AA25342548003B242C /* UIView+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
 		D47C36AF2535794B003B242C /* GradientColorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorNavigationController.swift; sourceTree = "<group>"; };
 		D47C36B12535816B003B242C /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
+		D47C36BF25358C0D003B242C /* GradientColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,7 @@
 		D47C36B525358654003B242C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D47C36A925342548003B242C /* UINavigationController+Addition.swift */,
+				D47C36A925342548003B242C /* UINavigationBar+Addition.swift */,
 				D47C36AA25342548003B242C /* UIView+Addition.swift */,
 			);
 			path = Extension;
@@ -138,6 +140,7 @@
 			children = (
 				D47C36AF2535794B003B242C /* GradientColorNavigationController.swift */,
 				D47C36B12535816B003B242C /* GradientColorView.swift */,
+				D47C36BF25358C0D003B242C /* GradientColorButton.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -263,9 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C36B425358649003B242C /* UIView+Addition.swift in Sources */,
+				D47C36C025358C0D003B242C /* GradientColorButton.swift in Sources */,
 				D47C36BD25358976003B242C /* GradientColorNavigationController.swift in Sources */,
 				D47C36BE2535897A003B242C /* GradientColorView.swift in Sources */,
-				D47C36B325358641003B242C /* UINavigationController+Addition.swift in Sources */,
+				D47C36B325358641003B242C /* UINavigationBar+Addition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     /// calling setGradientBackground() on viewDidAppear
-    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
+    func setGradientBackground(colorTop: UIColor = UIColor(red: 47/255, green: 194/255, blue: 141/255, alpha: 1), colorBottom: UIColor = UIColor(red: 57/255, green: 233/255, blue: 235/255, alpha: 1)) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
@@ -21,3 +21,6 @@ public extension UIView {
        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
+//fileprivate let gradientColorTop    = UIColor(red: 47/255, green: 194/255, blue: 141/255, alpha: 1)
+//fileprivate let gradientColorBottom = UIColor(red: 57/255, green: 233/255, blue: 235/255, alpha: 1)

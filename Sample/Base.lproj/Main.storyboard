@@ -8,19 +8,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Some Title-->
+        <!--Gradient Color NavigationBar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tit-7J-32a">
-                                <rect key="frame" x="186.5" y="460" width="41" height="30"/>
-                                <state key="normal" title="PUSH"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tit-7J-32a" customClass="GradientColorButton" customModule="NavigationBarWithGradientColor">
+                                <rect key="frame" x="107" y="453" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.7843137255" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Am-26-8xo"/>
+                                    <constraint firstAttribute="width" constant="200" id="uPt-rU-XDm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="PUSH">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="omE-GB-mJA" kind="presentation" id="LVE-NK-8pG"/>
+                                    <segue destination="pnK-cI-Q02" kind="presentation" id="LVE-NK-8pG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Some Title" id="DEa-yr-d5c">
+                    <navigationItem key="navigationItem" title="Gradient Color NavigationBar" id="DEa-yr-d5c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xfr-uP-icv"/>
                     </navigationItem>
                 </viewController>
@@ -39,21 +53,25 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Regular NavigationBar-->
         <scene sceneID="Ec8-Vd-y1W">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="omE-GB-mJA" sceneMemberID="viewController">
+                <viewController id="omE-GB-mJA" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2eq-CU-PhH" customClass="GradientColorView" customModule="NavigationBarWithGradientColor">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QSJ-fV-Eh8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qsT-qG-8Z4"/>
+                    <navigationItem key="navigationItem" title="Regular NavigationBar" id="qsT-qG-8Z4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5SP-uL-3W3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmX-WI-7Om" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959" y="139"/>
+            <point key="canvasLocation" x="2876.811594202899" y="138.61607142857142"/>
         </scene>
         <!--Gradient Color Navigation Controller-->
         <scene sceneID="CU9-tO-aDZ">
@@ -72,6 +90,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ol-MW-uYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CbC-S9-Nfs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pnK-cI-Q02" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TUl-VY-ha0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="omE-GB-mJA" kind="relationship" relationship="rootViewController" id="9Ge-el-Yjd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAs-zq-IVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966.6666666666667" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

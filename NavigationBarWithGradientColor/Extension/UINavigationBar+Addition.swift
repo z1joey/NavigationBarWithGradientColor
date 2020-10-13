@@ -1,5 +1,5 @@
 //
-//  TransparentNavigationBar.swift
+//  UINavigationBar+Addition.swift
 //  Companion
 //
 //  Created by joey on 11/28/19.
@@ -8,35 +8,36 @@
 
 import UIKit
 
-public extension UINavigationController {
+public extension UINavigationBar {
     private static var _isTransparent = false
     private static var _isHairlineHidden = false
+    private static var _textColor: UIColor = .white
 
     var isTransparent: Bool {
         get {
-            return UINavigationController._isTransparent
+            return UINavigationBar._isTransparent
         }
         set {
             if newValue == true {
-                navigationBar.setBackgroundImage(UIImage(), for: .default)
-                navigationBar.shadowImage = UIImage()
+                setBackgroundImage(UIImage(), for: .default)
+                shadowImage = UIImage()
             } else {
-                navigationBar.setBackgroundImage(nil, for: .default)
-                navigationBar.shadowImage = nil
+                setBackgroundImage(nil, for: .default)
+                shadowImage = nil
             }
-            UINavigationController._isTransparent = newValue
+            UINavigationBar._isTransparent = newValue
         }
     }
 
     var isHairlineHidden: Bool {
         get {
-            return UINavigationController._isHairlineHidden
+            return UINavigationBar._isHairlineHidden
         }
         set {
-            if let hairline = findHairlineImageViewUnder(navigationBar) {
+            if let hairline = findHairlineImageViewUnder(self) {
                 hairline.isHidden = newValue ? true : false
             }
-            UINavigationController._isTransparent = newValue
+            UINavigationBar._isTransparent = newValue
         }
     }
 
@@ -50,5 +51,15 @@ public extension UINavigationController {
             }
         }
         return nil
+    }
+
+    var textColor: UIColor {
+        get {
+            return UINavigationBar._textColor
+        }
+        set {
+            titleTextAttributes = [NSAttributedString.Key.foregroundColor: newValue]
+            UINavigationBar._textColor = newValue
+        }
     }
 }
